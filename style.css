@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Baloo Bhai 2', cursive;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+
+ion-icon {
+    color: white;
+  }
+
+.center {
+    text-align: center;
+}
+
+/* navigation bar */
+#navbar {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    /* position: sticky; */
+    top: 0;
+    z-index: 5;
+    position: fixed;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#logo {
+    margin: .2rem 1.9rem;
+    display: flex;
+}
+
+#logo img {
+    margin: .4rem .3rem;
+    height: 7rem;
+    width: 13.4rem;
+}
+
+#logo h1 {
+    display: flex;
+    color: wheat;
+    font-size: 3rem;
+    align-items: flex-end;
+    font-weight: 900;
+}
+
+#logo h3 {
+    display: flex;
+    font-size: 1.7rem;
+    align-items: flex-end;
+    font-weight: 700;
+    color: wheat;
+}
+
+#navbar ul {
+    display: flex;
+
+    position: absolute;
+    right: 1rem;
+}
+
+
+#navbar ul li {
+
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    padding: .5rem 3.1rem;
+    text-decoration: none;
+    /* border-radius: 1rem; */
+    color:rgb(249, 249, 12);
+    font-weight: 900;
+    font-size: 1.47em;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 .8rem;
+}
+#navbar ul li a::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    border-top: 2px solid rgb(249, 249, 12) ;
+    border-left: 2px solid rgb(249, 249, 12) ;
+} 
+#navbar ul li a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid rgb(249, 249, 12) ;
+    border-right: 2px solid rgb(249, 249, 12) ;
+} 
+
+#navbar ul li a:hover::before,
+#navbar ul li a:hover::after {
+    width: 10%;
+    height: 20%;
+    transform: rotate(360deg);
+}
+
+.mobile-nav-icon1,
+.mobile-nav-icon2{
+    width: 4rem;
+    height: 4rem;
+    display:none;
+}
+
+/* home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3.3rem 26rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('tour.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    
+}
+
+.primary-h {
+    font-size: 4rem;
+    margin-top: 6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary-h {
+    padding: 1.9rem 0rem;
+    margin: 0rem 0rem;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1.9rem;
+}
+.end-h{
+    display: flex;
+    flex-direction: column;
+}
+.end-h h1{
+    font-size: 3rem;
+}
+.end-h input,
+.end-h select {
+    padding: 1.2rem 3.2rem;
+    margin: .6rem -.2rem;
+    font-size: 1.5rem;
+    /* margin-top: 1rem; */
+}
+.end-h button {
+    
+    background-color: rgb(25, 171, 228);
+    color: white;
+    margin-bottom: 19rem;
+}
+ 
+/* tours section */
+#tours-container{
+    position: relative;
+}
+#tours-container::before {
+    content: "";
+    position: absolute;
+    background: url('bg.jpg') no-repeat center center/cover;
+     height: 100%; 
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+
+}
+#int-tours,#ind-tours{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+}
+
+#tours-container h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 3px 2px 2px white ;
+}
+#tours-container h2{
+    font-size: 4rem;
+    font-weight: 500;
+    text-shadow: 3px 2px 2px white ;
+}
+.box{
+    display:flex;
+    flex-direction: column;
+    margin: 2rem;
+    width: 40rem;
+    height: 57rem;
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: 2px 2px 6px 1px whitesmoke;
+}
+.box img{
+    width: 36rem;
+    height: 36rem;
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+}
+ .box h2{
+    font-size: 2.5rem;
+    background-color: gray;
+    margin-top:-0.2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+ .box p{
+    margin: auto;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.box span{
+    font-size: 1.9rem;
+    color: #04a2d5;
+    text-align: right;
+}
+.box a{
+     text-align: right;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.box a:hover{
+     cursor:pointer;
+     color: rgb(210, 211, 45);
+}
+
+/* contact section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 77rem;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('contact_0.jpg') no-repeat center center/cover;
+    top: 0;
+    left: 0;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 34px; */
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 9px;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#contact-box .submitbutton{
+    width: 103%;
+    margin: 2rem 0;
+
+}
+#contact-box .submit:hover{
+  background-color:  rgb(113, 195, 227);
+  cursor: pointer;
+}
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 2rem;
+    font-weight: 600;
+}
+#contact h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+/* about us section  */
+#about{
+    position: relative;
+}
+#about::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('plane-globe1.png') no-repeat center center/cover;
+    filter: invert(100%);
+    top: 0;
+    left: 0
+
+}
+#about h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 7.8rem;
+    text-shadow: 3px 2px 2px white;
+    display:flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.aboutus div{
+   width: 50vw;
+   font-size: 2.5rem;
+}
+.motto{
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+.btn{
+    display:inline-block;
+    color: #fff;
+    background-color: #0084ff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    /* transition: 0.3sec ease; */
+    margin-left: 41vw;
+    margin-bottom: 32rem;
+}
+.btn:hover{
+    background-color: #006dd6;
+}
+/* footer section */
+#footer{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgb(57, 53, 53);
+    opacity: 0.8;
+    color: white;
+    /* padding: 2px 0px;
+    margin: 12px 0px; */
+}
+.four-column{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.four-column h3{
+    font-size: 2rem;
+    color:#adadad ;
+}
+.four-column p{
+    font-size: 1.5rem;
+    color: #adadad;
+    width: 25vw;
+}
+.four-column li{
+    list-style: none;
+}
+.four-column a,.credits p,.credits a{
+    text-decoration: none;
+    color:#adadad ;
+    font-size: 1.7rem;
+}
+
+.four-column a:hover{
+    color:white ;
+}
+.f-services span,
+.f-links span,
+.f-address span{
+    margin-right: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container h3{
+    display: inline;
+    font-size: 2rem;
+    position: relative;
+    bottom: 2.7rem;
+    padding-right: 1rem;
+}
+.icons{
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+    width: 2.7rem; 
+    height: 2.7rem; 
+    background-color: rgba(144, 172, 208, 0.2);
+    animation: water-wave 3s linear infinite;
+}
+.credits p{
+    text-align: center;
+    font-size: 1.5rem;
+}
